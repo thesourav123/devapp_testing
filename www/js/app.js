@@ -22,3 +22,10 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('starter', function($scope){
+  $scope.openBrowser = function(){
+   var ref = cordova.InAppBrowser.open('http://apache.org', '_self');
+   ref.show();
+  }
+}])
